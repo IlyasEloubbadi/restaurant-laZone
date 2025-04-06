@@ -4,18 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 function Homee() {
   const navigate = useNavigate(); // Initialize the navigation function
-  // const handleClient = () => {
-  //   navigate('/client'); // Navigate to the client page
-  // };  
-  const handleCaissier = () => {
 
-
-    navigate('/caissier'); // Navigate to the caissier page
+  const handleClient = () => {
+    navigate('/client'); // Navigate to the client page
   };
 
-  const handleGerant = () => {
-    navigate('/gerant'); // Navigate to the gerant page
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent form submission
@@ -24,8 +17,7 @@ function Homee() {
 
   return (
     // <div className="home">
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#fbe484] to-[#c98634] text-center font-sans">
-
+    <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#b16448] to-[#c98634] p-8 text-center font-sans">
       <div className="logo">
         <img src={logo} alt="Restaurant Logo" />
       </div>
@@ -38,10 +30,10 @@ function Homee() {
       {/* <div class="flex justify-center gap-4"> */}
         <form className="button-group-form" onSubmit={handleSubmit}>
         {/* <form class="flex gap-4 p-6 bg-yellow-400/80 rounded-lg hover:bg-orange-600 transition-colors duration-300" onSubmit={handleSubmit}> */}
-        {/* <button type="button" className="button" onClick={handleClient}>Client</button> */}
-          <button type="button" className="button" onClick={handleCaissier}>Caissier</button>
-          <button type="button" className="button" onClick={handleGerant}>Gerant</button> 
-        
+        <button type="button" className="button" onClick={handleClient}>Client</button>
+          {/* <button type="button" className="p-3 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300" onClick={handleClient}>Client</button>
+          <button type="button" className="p-3 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300" onClick={handleCaissier}>Caissier</button>
+          <button type="button" className="p-3 bg-yellow-500 text-white rounded-lg font-semibold hover:bg-yellow-600 transition-colors duration-300" onClick={handleGerant}>Gerant</button> */}
         </form>
       </div>
     </div>

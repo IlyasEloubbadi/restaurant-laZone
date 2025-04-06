@@ -15,7 +15,7 @@ export default function WelcomeClient() {
   return (
     <div >
         {/* <div className="body"> */}
-        <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#b16448] to-[#c98634] p-8 text-center font-sans">
+        <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#fbe484] to-[#c98634] text-center font-sans">
         
         <div className="container-client">
          <div className="logo">  
@@ -40,7 +40,7 @@ export default function WelcomeClient() {
         required
         value={Name}
         onChange={(e) => setName(e.target.value)}/><br></br>
-       <button onClick={handleSubmit =>  ({Name })} 
+       <button onClick={handleSubmit} 
           // className="connect">
            className="w-full bg-[#ffd700] text-white p-3 rounded-lg font-semibold hover:bg-[#f5deb3] transition-colors duration-300">
           Accéder à mon espace

@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png';
-
+import { useNavigate } from 'react-router-dom';
 export default function WelcomeCaissier() {
   const [caisserName, setCaisserName] = useState('');
   const [caissieremail, setCaissierEmail] = useState('');
   const [caissierpassword, setCaissierPassword] = useState('');
-
+const navigate = useNavigate(); // Initialize the navigation function
   const handleSubmit = () => {
-    
+    navigate('/home');
    //Api(fetch,axios)
   };
   return (
     <div>
       {/* <div className="body"> */}
-      <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#b16448] to-[#c98634] p-8 text-center font-sans">
+      <div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#3a211a] via-[#fbe484] to-[#c98634] text-center font-sans">
       <div className="logo">  
         <img src={logo} alt="Logo" /> 
         {/* <h1 className="title">LA ZONE - RESTAURANT</h1>  */}
@@ -32,6 +32,7 @@ export default function WelcomeCaissier() {
           className="mt-2 p-3 w-full rounded-lg border-2 border-[#8d6e63] focus:ring-2 focus:ring-[#ffd700] outline-none transition duration-300"
           type="text"
           placeholder="Entrer votre prénom"
+          required
           value={caisserName}
           onChange={(e) => setCaisserName(e.target.value)}
         /><br />
@@ -41,6 +42,7 @@ export default function WelcomeCaissier() {
           className="mt-2 p-3 w-full rounded-lg border-2 border-[#8d6e63] focus:ring-2 focus:ring-[#ffd700] outline-none transition duration-300"
           type="email"
           placeholder="Entrer votre Email"
+          required
           value={caissieremail}
           onChange={(e) => setCaissierEmail(e.target.value)}
         /><br />
@@ -50,14 +52,14 @@ export default function WelcomeCaissier() {
           className="mt-2 p-3 w-full rounded-lg border-2 border-[#8d6e63] focus:ring-2 focus:ring-[#ffd700] outline-none transition duration-300"
           type="password"
           placeholder="Entrer votre mot de passe"
+          required
           value={caissierpassword}
           onChange={(e) => setCaissierPassword(e.target.value)}
         /><br />
 
-<button onClick={handleSubmit => ({ caisserName,caissieremail,caissierpassword })} 
-          // className="connect"
-          className="w-full bg-[#ffd700] text-white p-3 rounded-lg font-semibold hover:bg-[#f5deb3] transition-colors duration-300"
-        >
+         <button onClick={handleSubmit} 
+         // className="connect"
+         className="w-full bg-[#ffd700] text-white p-3 rounded-lg font-semibold hover:bg-[#f5deb3] transition-colors duration-300">
           Accéder à mon espace
         </button>
         </form>
