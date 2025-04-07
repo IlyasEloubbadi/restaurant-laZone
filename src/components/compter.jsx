@@ -1,12 +1,23 @@
-import React from "react";
+import {useState} from 'react'
 
-export default function Hello() {
-  return (
-    <div className="flex flex-col items-center space-y-6 mt-2">
- <div className="h-16 w-16 rounded-full bg-blue-500 "></div>
- <div className="h-16 w-16 rounded-full bg-orange-500"></div>
- <div className="h-16 w-16 rounded-full bg-green-500"></div>
-</div>
+function Compter () {
+const [compter , setCompter] = useState(0);
 
-  );
-} 
+const handleIncrement = () =>{
+setCompter (compter + 1) ;
+
+}
+const handleDecrement = () =>{
+  setCompter (compter -1) ;
+  
+  }
+  return(
+    <div>
+    <h1> {compter} </h1>
+    <button onClick={handleIncrement} class="text" > increment </button><br></br>
+    <button onClick={handleDecrement} > decrement </button>
+    </div>
+  )
+}
+
+export default Compter;

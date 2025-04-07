@@ -8,9 +8,11 @@ export default function WelcomeClient() {
  const navigate = useNavigate(); // Initialize the navigation function
   const handleSubmit = () => {
    //api(axios,fetch)
+   //sauvegarder le nom
+   localStorage.setItem("userName", Name);
    navigate('/home');
   };
-  
+
 
   return (
     <div >

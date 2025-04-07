@@ -1,26 +1,42 @@
-
-import {useState}from 'react'
-import { Link } from 'react-router-dom';
-// import shoppingcart from '../assets/shopping-cart.png'
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { UserCircle2 } from 'lucide-react';
 
 function Header() {
-  const [name, setName] = useState('');
+  const navigate = useNavigate();
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const storedName = localStorage.getItem('userName');
+    if (storedName) setUserName(storedName);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.clear();
+    navigate('/');
+  };
+
   return (
-    <header className='flex justify-between items-center mb-5' >
-   <Link to="/" className='text-xl font-semibold'  >laZone</Link>
-  <div className='w-10 h-10 bg-gray-100 rounded-full
-            flex justify-center items-center relative'>
-     <p className="text-xl">Hello, {name}</p> <br></br>
-         <button 
-           className="bg-[#ff0000]  p-2 rounded-lg hover:bg-[#f5deb3] transition-colors text[black]" >
-           Deconnexion
-         </button> 
-  {/* <img src={shoppingcart} alt="Cart" className='w-6'/>
-  <span className='absolute top-2/3 right-1/2 bg-red-500 text-white 
-  text-sm w-5 h-5 rounded-full flex justify-center items-center ' >0</span> */}
-  </div>
+    <header className="flex justify-between items-center px-6 py-3 bg-gradient-to-r from-[#3a211a] via-[#b16448] to-[#c98634] text-white shadow-md">
+      
+      {/* Logo */}
+      <Link to="/" className="text-2xl font-bold text-[#ffd700] hover:text-white transition">
+        laZone
+      </Link>
+
+      {/* Profil compact */}
+      <div className="flex items-center gap-3">
+        <p className="text-md font-medium">Bonjour, {userName || 'Invité'}</p>
+        <UserCircle2 size={30} className="text-white" />
+        <button 
+          onClick={handleLogout} 
+          className="bg-red-600 hover:bg-red-400 text-white px-3 py-1 rounded text-sm"
+        >
+          Déconnexion
+        </button>
+      </div>
     </header>
-  )
+  );
 }
 
 export default Header;
