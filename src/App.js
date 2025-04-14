@@ -10,6 +10,8 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Layout from './components/layout';
 import Details from './pages/Details';
 import Compter from './components/compter';
+import Dashboard from './components/dashboard';
+import AdminDashboard from './components/AdminDashboard';
 
 function App() {
   return (
@@ -22,7 +24,10 @@ function App() {
         <Route path="/" element={<WelcomeClient />} />
         <Route path="/caissier" element={<WelcomeCaissier/>} />
         <Route path="/gerant" element={<WelcomeGerant/>} />
+        <Route path="/dash" element={<Dashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/home" element={<Layout />}> 
+      
     </Route>
 
 </Routes>

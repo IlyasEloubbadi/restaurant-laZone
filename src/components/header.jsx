@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { UserCircle2 } from 'lucide-react';
+import { UserCircle2 } from 'lucide-react'; // Import the icon
 
 function Header() {
   const navigate = useNavigate();

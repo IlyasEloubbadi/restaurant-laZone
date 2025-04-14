@@ -11,7 +11,7 @@ export default function WelcomeCaissier() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Prevent page refresh
-    localStorage.setItem("userName", Name);
+    localStorage.setItem("userName", Name);//Stock le nom dans le localStorage(Navigateur)
     navigate('/home'); // Navigate to home
     // Optionally handle API call here
   };

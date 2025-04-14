@@ -8,8 +8,6 @@ function Homee() {
   //   navigate('/client'); // Navigate to the client page
   // };  
   const handleCaissier = () => {
-
-
     navigate('/caissier'); // Navigate to the caissier page
   };
 
