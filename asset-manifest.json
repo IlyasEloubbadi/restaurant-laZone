@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/RESTAURANT-LAZONE-F/static/css/main.7c467493.css",
+    "main.js": "/RESTAURANT-LAZONE-F/static/js/main.a758e64c.js",
+    "static/js/453.64555ab2.chunk.js": "/RESTAURANT-LAZONE-F/static/js/453.64555ab2.chunk.js",
+    "static/media/logo.png": "/RESTAURANT-LAZONE-F/static/media/logo.05fbbe41a72fe88f595f.png",
+    "static/media/logo.svg": "/RESTAURANT-LAZONE-F/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/RESTAURANT-LAZONE-F/index.html",
+    "main.7c467493.css.map": "/RESTAURANT-LAZONE-F/static/css/main.7c467493.css.map",
+    "main.a758e64c.js.map": "/RESTAURANT-LAZONE-F/static/js/main.a758e64c.js.map",
+    "453.64555ab2.chunk.js.map": "/RESTAURANT-LAZONE-F/static/js/453.64555ab2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c467493.css",
+    "static/js/main.a758e64c.js"
+  ]
+}
