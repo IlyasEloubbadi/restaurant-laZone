@@ -126,7 +126,15 @@ input:focus {
 
   font-family: sans-serif;
   }
-
+  .products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center ;
+    padding: 0;
+    margin: 0;
+    list-style-type:none ;
+  }
 
 
 

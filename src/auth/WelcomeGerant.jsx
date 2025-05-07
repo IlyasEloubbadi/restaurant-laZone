@@ -8,7 +8,7 @@ export default function WelcomeCaissier() {
  const navigate = useNavigate(); // Initialize the navigation function
 
   const handleSubmit = () => {
-    navigate('/home');
+    navigate('/dash');
 
    //Api(fetch,axios)
   };
